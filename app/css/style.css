@@ -435,7 +435,13 @@ p {
 .wrapper {
   max-width: 970px;
   margin: 0 auto;
-  padding: 0 1%; }
+  padding: 0 40px; }
+  @media (min-width: 560px) and (max-width: 730px) {
+    .wrapper {
+      padding: 0 24px; } }
+  @media (min-width: 320px) and (max-width: 559px) {
+    .wrapper {
+      padding: 0 24px; } }
 
 header {
   background: url(../images/up.jpg) no-repeat;
@@ -458,7 +464,7 @@ header {
     color: #000;
     font-size: 18px; }
     .nav .nav-anchor:hover {
-      opacity: 0.7; }
+      opacity: 0.5; }
   .nav .nav-item {
     border: 2px solid #000; }
 
@@ -482,9 +488,9 @@ header {
 
 .footprint {
   position: relative; }
-
-.footprint-hidden {
-  display: none; }
+  @media (max-width: 1000px) {
+    .footprint {
+      display: none; } }
 
 .footprint-item {
   position: absolute;
@@ -495,14 +501,6 @@ header {
   transform: rotate(-118deg);
   right: calc(50% - 100px);
   top: 62px;
-  -webkit-animation-name: slide;
-  animation-name: slide;
-  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1.01);
-  animation-timing-function: cubic-bezier(0, 0, 1, 1.01);
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
   opacity: 0; }
   .footprint-item:nth-child(2) {
     -webkit-transform: rotate(-124deg);
@@ -550,6 +548,16 @@ header {
     -webkit-animation-duration: .5s;
     animation-duration: .5s; }
 
+._footsteps-active .footprint-item {
+  -webkit-animation-name: slide;
+  animation-name: slide;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1.01);
+  animation-timing-function: cubic-bezier(0, 0, 1, 1.01);
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
 .header-logo {
   margin-left: 5%; }
 
@@ -567,7 +575,7 @@ header {
   margin-bottom: 90px;
   font-size: 24px;
   width: 95%; }
-  @media (min-width: 320px) and (max-width: 559px) {
+  @media (max-width: 880px) {
     .header-text {
       font-size: 22px;
       width: 100%; } }
@@ -607,8 +615,8 @@ header {
   font-family: 'Biko'; }
   @media (min-width: 320px) and (max-width: 559px) {
     .nav-logo .span {
-      font-size: 48px;
-      top: 15px; } }
+      font-size: 55px;
+      top: 16px; } }
 
 .logo-2 {
   max-width: 465px;
@@ -633,6 +641,9 @@ header {
 
 .logo-big {
   width: 350px; }
+  @media (min-width: 320px) and (max-width: 559px) {
+    .logo-big {
+      width: 300px; } }
 
 .btn {
   padding: 0 23px;
@@ -642,6 +653,8 @@ header {
   border: none;
   outline: none;
   margin-top: 28px; }
+  .btn:hover {
+    color: #fff; }
 
 footer {
   background: url(../images/BOTTOM.jpg) no-repeat;
@@ -667,12 +680,15 @@ footer {
     @media (min-width: 320px) and (max-width: 559px) {
       footer ul {
         flex-flow: wrap; } }
+    @media (min-width: 320px) and (max-width: 400px) {
+      footer ul li {
+        margin: 0 5%; } }
+    footer ul li:hover {
+      opacity: 0.5; }
     footer ul .footer-item {
       background: url(../images/sprite.png) no-repeat;
       width: 47px;
       height: 46px; }
-      footer ul .footer-item:hover {
-        opacity: 0.7; }
       footer ul .footer-item:last-child {
         background-position: 0 -101px; }
       footer ul .footer-item:nth-child(4) {
@@ -768,7 +784,7 @@ footer {
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  background-color: #95e1d3; }
+  background-color: #255838; }
   .menu .menu__list {
     padding: 0;
     display: block; }

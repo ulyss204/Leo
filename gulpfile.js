@@ -8,7 +8,7 @@ var imagemin = require('gulp-imagemin');
 var useref = require('gulp-useref');
 
 gulp.task('useref', function(){
-  return gulp.src('app/*.html')
+  return gulp.src('*.html')
     .pipe(useref())
     
     .pipe(gulpIf('*.js', uglify()))
